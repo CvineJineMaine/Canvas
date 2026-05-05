@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    width: 100%;
+    height: 100vh;
+}
+
+/* #myCanvas{
+    width: 100%;
+    height: 100%;
+} */
+
+.border{
+    border: 2px solid blue;
+}
+
+#MyCanvas{
+    justify-content: center;
+}
+
+/* Контейнер для полотна та меню */
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+#myCanvas {
+    background-color: white;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: crosshair;
+}
+
+/* Панель інструментів */
+.menu {
+    display: flex;
+    align-items: center; /* Вирівнювання елементів по вертикалі */
+    gap: 10px;           /* Відстань між кнопками */
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Загальні стилі для кнопок */
+.menu button {
+    display: flex;
+    flex-direction: row; /* За замовчуванням текст і іконка в ряд */
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.menu button:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+/* Спільні стилі для обох кнопок */
+.saveCanvas, .eraseMode {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* Розміри та відступи як у "Зберегти" */
+    padding: 5px 12px !important;
+    min-width: 70px;
+    height: auto; 
+    
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Базовий стиль для всіх кнопок меню */
+.menu-btn {
+    display: inline-flex !important;
+    flex-direction: column !important; /* Іконка СУВОРО над текстом */
+    align-items: center !important;    /* Центрування по горизонталі */
+    justify-content: center !important;/* Центрування по вертикалі */
+    
+    width: 80px;            /* Однаковий розмір для всіх */
+    height: 65px;           /* Достатньо висоти для іконки + тексту */
+    padding: 5px !important;
+    
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-btn:hover {
+    background-color: #f9f9f9;
+}
+
+/* Стиль для іконок всередині кнопок */
+.menu-btn .icon {
+    width: 40px !important;  /* Фіксований малий розмір */
+    height: 40px !important;
+    margin-bottom: 4px;      /* Відступ між малюнком і текстом */
+    flex-shrink: 0;          /* Щоб іконка не стискалася */
+}
+
+/* Стиль тексту */
+.menu-btn .text {
+    font-size: 11px;         /* Трохи менший шрифт, щоб вліз довгий текст */
+    font-family: sans-serif;
+    line-height: 1.1;
+    text-align: center;
+}
+
+/* Індивідуальні кольори для іконок */
+.saveCanvas .icon {
+    stroke: #2ecc71; /* Зелений */
+}
+
+.clearCanvas .icon {
+    stroke: #e74c3c; /* Червоний */
+}
+
+
+/* Стилізація інпутів */
+#colorPicker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    border-radius: 8px;
+}
+
+#inputLineWidth {
+    width: 100px;
+    cursor: pointer;
+}
