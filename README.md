@@ -1,5 +1,5 @@
 # Canvas
-##Paint in browser
+## Paint in browser
 ![screen of main page](./screen.png)
 
 ## Tech Stack
