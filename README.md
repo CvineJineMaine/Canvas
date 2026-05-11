@@ -10,5 +10,5 @@
 
 ## Project Structure
     index.html — landing page.
-    /script.js — simple move control with keyboard keys.
+    /script.js — drawing logic and structure.
     /style.css — contains simple styles.
